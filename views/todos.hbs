@@ -1,0 +1,11 @@
+
+    
+    <h1>Yapılacaklar Listesi</h1>
+    <p>{{todos}}</p>
+    <ul>
+        {{#each todos}}
+            <li>{{this.title}}</li>
+            <li>{{this.description}}</li>
+            <li>{{this.isDone}}</li>
+        {{/each}}
+    </ul>

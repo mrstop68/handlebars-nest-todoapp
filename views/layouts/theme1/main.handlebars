@@ -3,18 +3,62 @@ theme1 main template
 <!DOCTYPE html>
 <html>
 <head>
+        <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>{{pageTitle}}</title>
+        <meta
+        content="Kemer Yat Turu - Kemer Tekne Turu - Mavi Deniz Yachting ile Antalya Kemer tekne turuna çıkmak için bizimle iletişime geçin!"
+        name="description" />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+    <link rel="canonical" href="https://mavidenizyat.com.tr/">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mavi Deniz Yachting Kemer Yat Turu">
+    <meta property="og:description"
+        content="Kemer Yat Turu - Kemer Tekne Turu - Mavi Deniz Yachting ile Antalya Kemer tekne turuna çıkmak için bizimle iletişime geçin!">
+    <meta property="og:url" content="https://mavidenizyat.com.tr/">
+    <meta property="og:site_name" content="Kemer Yat Turu">
+    <meta property="og:image" content="https://mavidenizyat.com.tr//public/theme1/img/logo.png">
+    <meta property="og:image:secure_url" content="https://mavidenizyat.com.tr//public/theme1/img/logo.png">
+    <meta property="og:image:alt" content="Kemer Yat Turu">
+    <meta property="og:image:type" content="image/webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="HandheldFriendly" content="true" />
+
+    <link rel="stylesheet" href="/public/theme1/css/master.css" />
+    <link rel="icon" type="image/x-icon" href="/public/theme1/favicon.ico" />
+    <link rel="apple-touch-icon" href="/public/theme1/favicon.ico" />
 </head>
 <body>
-    <header>
-        <!-- Buraya başlık veya menü gibi ortak içerikler ekleyebilirsiniz -->
-    </header>
+         {{> theme1/header}}
     <main>
         <!-- "todos.hbs" sayfasının içeriği buraya gelecek -->
         {{{body}}}
     </main>
-    <footer>
+        {{> theme1/footer}}
         <!-- Buraya altbilgi veya diğer ortak içerikler ekleyebilirsiniz -->
-    </footer>
+            <script src="/public/theme1/libs/jquery-3.3.1.min.js"></script>
+
+        <!-- <script src="/public/theme1/plugins/popever/popper.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+
+        <!-- <script src="/public/theme1/libs/bootstrap-select.min.js"></script> -->
+
+        <script src="/public/theme1/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="/public/theme1/plugins/headers/slidebar.js"></script>
+        <script src="/public/theme1/plugins/headers/header.js"></script>
+
+        <!-- <script src="/public/theme1/plugins/scrollreveal/scrollreveal.min.js"></script> -->
+        <!-- <script src="/public/theme1/plugins/ofi.min.js"></script> -->
+
+        <script src="/public/theme1/plugins/slick/slick.js"></script>
+
+        <script src="/public/theme1/plugins/noUiSlider/wNumb.js"></script>
+        <script src="/public/theme1/plugins/noUiSlider/nouislider.min.js"></script>
+
+        <script src="/public/theme1/js/custom.js"></script>
 </body>
 </html>

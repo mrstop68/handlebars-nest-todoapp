@@ -96,12 +96,15 @@ export class LanguageMiddleware implements NestMiddleware {
 
     //istek atılan oteli tespit etme
     const host = req.headers.host;
-    const allHotels = await this.hotelsService.findAll(); // Burada asenkron bir şekilde veriyi alıyoruz
-    const hotel = JSON.parse(JSON.stringify(allHotels)); // JSON.parse() fonksiyonu için veriyi string olarak çeviriyoruz
-    const selectedHotel = hotel.find(function (otel: any) {
-      return otel.website === host;
-      //  return otel.name === 'Larissa Hotel';
-    });
+    //1. yol
+    const selectedHotel = await this.hotelsService.findOneWithWebsite(host); // Burada asenkron bir şekilde hotel listesini alıyoruz
+    //2.yol
+    // const allHotels = await this.hotelsService.findAll(); // Burada asenkron bir şekilde veriyi alıyoruz
+    // const hotel = JSON.parse(JSON.stringify(allHotels)); // JSON.parse() fonksiyonu için veriyi string olarak çeviriyoruz
+    // const selectedHotel = hotel.find(function (otel: any) {
+    //   return otel.website === host;
+    //   //  return otel.name === 'Larissa Hotel';
+    // });
     req['selectedHotel'] = selectedHotel;
     next();
   }

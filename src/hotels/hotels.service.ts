@@ -20,7 +20,10 @@ export class HotelsService {
   async findOne(id: number) {
     return await this.hotelModel.findById(id);
   }
-
+  // 'websites' api si için middleware den gönderilen fonksiyon
+  async findOneWithWebsite(website: string): Promise<Hotel> {
+    return await this.hotelModel.findOne({ website: website });
+  }
   update(id: number, updateHotelDto: UpdateHotelDto) {
     return `This action updates a #${id} hotel`;
   }
